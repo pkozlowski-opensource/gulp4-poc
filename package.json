@@ -1,0 +1,7 @@
+{
+  "name": "gulp4-poc",
+  "version": "0.0.0",
+  "dependencies": {
+    "orchestrator": "orchestrator/orchestrator#blaine"
+  }
+}
