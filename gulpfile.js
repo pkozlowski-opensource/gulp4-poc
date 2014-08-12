@@ -10,10 +10,7 @@ function async(delay, message) {
 }
 
 function private(done) {
-  setTimeout(function () {
-    console.log("Private function finished");
-    done(null, 'private');
-  }, 800);
+  return gulp.src('.gitignore').pipe(gulp.dest('dest'));
 }
 
 gulp.task('foo', async(400, 'foo'));
