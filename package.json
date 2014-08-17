@@ -2,7 +2,7 @@
   "name": "gulp4-poc",
   "version": "0.0.0",
   "dependencies": {
-    "orchestrator": "pkozlowski-opensource/orchestrator#update_deps",
+    "orchestrator": "pkozlowski-opensource/orchestrator#now_and_later",
     "vinyl-fs": "~0.3.6"
   }
 }
