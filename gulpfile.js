@@ -2,15 +2,16 @@ var gulp = require('./gulp');
 
 function async(delay, message) {
   return function(done) {
-    console.log("Some async function started and going to say: ", message);
+    //console.log("Some async function started and going to say: ", message);
     setTimeout(function () {
-      console.log("Some async function finished after saying: ", delay, message);
+      //console.log("Some async function finished after saying: ", delay, message);
       done(null, message);
     }, delay);
   };
 }
 
 function private(done) {
+  throw new Error('sth');
   return gulp.src('.gitignore').pipe(gulp.dest('dest'));
 }
 
@@ -23,4 +24,4 @@ gulp.task(function named() {
   return 'from named';
 });
 
-gulp.task('default', gulp.series(gulp.parallel('foo', 'bar'), 'baz'));
+gulp.task('default', gulp.series(gulp.parallel('foo', 'bar', private), private));
